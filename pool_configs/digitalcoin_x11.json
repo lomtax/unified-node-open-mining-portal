@@ -1,0 +1,71 @@
+{
+    "enabled": true,
+    "coin": "digitalcoin_x11.json",
+
+    "auxes": [],
+    "address": "DTi6PgSPfjXJNQGeYNhBscYq3hCwVC3NPY",
+
+    "rewardRecipients": {
+        "n37vuNFkXfk15uFnGoVyHZ6PYQxppD3QqK": 1.5,
+        "22851477d63a085dbc2398c8430af1c09e7343f6": 0.1
+    },
+
+    "paymentProcessing": {
+        "enabled": true,
+        "paymentInterval": 30,
+        "minimumPayment": 0.01,
+        "daemon": {
+            "host": "127.0.0.1",
+            "port": 5100,
+            "user": "user_x11",
+            "password": "password"
+        }
+    },
+
+    "ports": {
+        "5008": {
+            "diff": 8
+        },
+        "5032": {
+            "diff": 32,
+            "varDiff": {
+                "minDiff": 8,
+                "maxDiff": 5120,
+                "targetTime": 15,
+                "retargetTime": 90,
+                "variancePercent": 30
+            }
+        },
+        "5256": {
+            "diff": 256
+        }
+    },
+
+    "daemons": [
+        {
+            "host": "127.0.0.1",
+            "port": 5100,
+            "user": "user_x11",
+            "password": "password"
+        }
+    ],
+
+    "p2p": {
+        "enabled": false,
+        "host": "127.0.0.1",
+        "port": 19333,
+        "disableTransactions": false
+    },
+
+    "mposMode": {
+        "enabled": false,
+        "host": "127.0.0.1",
+        "port": 3306,
+        "user": "user",
+        "password": "password",
+        "database": "dgc",
+        "checkPassword": false,
+        "autoCreateWorker": false
+    }
+
+}

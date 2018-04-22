@@ -1,0 +1,68 @@
+{
+    "enabled": true,
+    "coin": "digitalcoin_sha256.json",
+
+    "auxes": [],
+    "address": "DStjrs91BJ9Bx1Btk4m9bf9YFhJw2by4XG",
+
+    "rewardRecipients": {},
+
+    "paymentProcessing": {
+        "enabled": true,
+        "paymentInterval": 30,
+        "minimumPayment": 0.01,
+        "daemon": {
+            "host": "127.0.0.1",
+            "port": 4100,
+            "user": "user_sha256",
+            "password": "password"
+        }
+    },
+
+    "ports": {
+        "4008": {
+            "diff": 8
+        },
+        "4032": {
+            "diff": 32,
+            "varDiff": {
+                "minDiff": 8,
+                "maxDiff": 5120,
+                "targetTime": 15,
+                "retargetTime": 90,
+                "variancePercent": 30
+            }
+        },
+        "4256": {
+            "diff": 256
+        }
+    },
+
+    "daemons": [
+        {
+            "host": "127.0.0.1",
+            "port": 4100,
+            "user": "user_sha256",
+            "password": "password"
+        }
+    ],
+
+    "p2p": {
+        "enabled": false,
+        "host": "127.0.0.1",
+        "port": 19333,
+        "disableTransactions": false
+    },
+
+    "mposMode": {
+        "enabled": false,
+        "host": "127.0.0.1",
+        "port": 3306,
+        "user": "user",
+        "password": "password",
+        "database": "dgc",
+        "checkPassword": false,
+        "autoCreateWorker": false
+    }
+
+}

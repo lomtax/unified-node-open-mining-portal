@@ -47,7 +47,7 @@ getmininginfo_x11:
 address_scrypt:
 	$(DASHCLI) $(B1) getnewaddress $(ACCOUNT)
 address_sha256:
-	$(DASHCLI) $(B2) getnewaddress $(ACCOUNT)
+	$(DASHCLI) $(B2) getnewaddress $(ACOUNT)
 address_x11:
 	$(DASHCLI) $(B3) getnewaddress $(ACCOUNT)
 
@@ -56,4 +56,17 @@ stop:
 	$(DASHCLI) $(B2) stop
 	$(DASHCLI) $(B3) stop
 
+clear:
+	rm -Rf scrypt/testnet3
+	rm -Rf sha256/testnet3
+	rm -Rf x11/testnet3
+
+newaddress:
+	./newPaymentAddress.sh
+
+reset:
+	rm -Rf scrypt/testnet3
+	rm -Rf sha256/testnet3
+	rm -Rf x11/testnet3
+	./newPaymentAddress.sh
 
